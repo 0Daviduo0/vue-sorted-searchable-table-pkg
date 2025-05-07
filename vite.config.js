@@ -21,7 +21,7 @@ export default defineConfig({
         // Configurazione per l'output UMD/IIFE
         globals: {
           vue: 'Vue', // Mappa 'vue' alla variabile globale 'Vue'
-          '@heroicons/vue/20/solid': 'HeroiconsVue20Solid' // Mappa '@heroicons/vue/20/solid' a un nome globale
+          '@heroicons/vue/20/solid': 'ChevronDownIcon, ChevronUpIcon' // Mappa '@heroicons/vue/20/solid' a un nome globale
         },
         // Poiché il componente usa classi Tailwind, il CSS sarà gestito dal progetto ospitante.
         // Non è necessario estrarre CSS separato dal componente stesso, a meno che tu non abbia stili <style> non-Tailwind.

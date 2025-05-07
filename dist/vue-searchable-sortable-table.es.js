@@ -40,10 +40,17 @@ const ee = { class: "px-4 sm:px-6 lg:px-8" }, te = { class: "sm:flex sm:items-ce
   emits: ["add-item", "sort-change", "search"],
   setup(s, { emit: b }) {
     const e = s, A = b, H = Q(), C = H ? String(H.uid) : Math.random().toString(36).substring(2, 9), h = w(e.initialSortKey), g = w(e.initialSortDirection);
-    $(() => [e.initialSortKey, e.initialSortDirection], ([t, a]) => {
-      e.externalSort || (h.value = t, g.value = a);
-    });
-    const z = v(() => e.externalSort ? e.initialSortKey : h.value), U = v(() => e.externalSort ? e.initialSortDirection : g.value);
+    $(
+      () => [e.initialSortKey, e.initialSortDirection],
+      ([t, a]) => {
+        e.externalSort || (h.value = t, g.value = a);
+      }
+    );
+    const z = v(
+      () => e.externalSort ? e.initialSortKey : h.value
+    ), U = v(
+      () => e.externalSort ? e.initialSortDirection : g.value
+    );
     function E(t) {
       if (e.externalSort) {
         let a = "asc";
@@ -58,8 +65,10 @@ const ee = { class: "px-4 sm:px-6 lg:px-8" }, te = { class: "sm:flex sm:items-ce
       if (K && L) u = 0;
       else if (K) u = -1;
       else if (L) u = 1;
-      else if (typeof l == "string" && typeof o == "string") u = l.localeCompare(o);
-      else if (typeof l == "number" && typeof o == "number") u = l - o;
+      else if (typeof l == "string" && typeof o == "string")
+        u = l.localeCompare(o);
+      else if (typeof l == "number" && typeof o == "number")
+        u = l - o;
       else {
         const V = String(l).toLowerCase(), q = String(o).toLowerCase();
         V < q && (u = -1), V > q && (u = 1);
@@ -70,11 +79,15 @@ const ee = { class: "px-4 sm:px-6 lg:px-8" }, te = { class: "sm:flex sm:items-ce
     const m = v(() => e.columns.filter((t) => t.isSearchableField !== !1).map((t) => ({ key: t.key, label: t.label }))), j = v(() => {
       if (!c.value) return "Ricerca";
       if (c.value === "search") return "Ricerca Globale";
-      const t = m.value.find((a) => a.key === c.value);
+      const t = m.value.find(
+        (a) => a.key === c.value
+      );
       return `Ricerca in "${(t == null ? void 0 : t.label) || c.value}"`;
     }), G = v(() => {
       if (c.value === "search") return "Cerca ovunque...";
-      const t = m.value.find((a) => a.key === c.value);
+      const t = m.value.find(
+        (a) => a.key === c.value
+      );
       return `Cerca in ${(t == null ? void 0 : t.label) || "seleziona campo"}...`;
     });
     function I() {
@@ -82,10 +95,16 @@ const ee = { class: "px-4 sm:px-6 lg:px-8" }, te = { class: "sm:flex sm:items-ce
     }
     X(() => {
       I();
-    }), $(() => [e.columns, e.searchAll], () => {
-      const t = c.value === "search" && e.searchAll || m.value.some((a) => a.key === c.value);
-      e.searchable && !t ? I() : e.searchable || (c.value = null);
-    }, { deep: !0, immediate: !0 });
+    }), $(
+      () => [e.columns, e.searchAll],
+      () => {
+        const t = c.value === "search" && e.searchAll || m.value.some(
+          (a) => a.key === c.value
+        );
+        e.searchable && !t ? I() : e.searchable || (c.value = null);
+      },
+      { deep: !0, immediate: !0 }
+    );
     function P() {
       clearTimeout(T), T = setTimeout(() => {
         const t = k.value.trim(), a = c.value;
@@ -158,7 +177,13 @@ const ee = { class: "px-4 sm:px-6 lg:px-8" }, te = { class: "sm:flex sm:items-ce
             "-mx-4 -my-2 sm:-mx-6 lg:-mx-8",
             e.tableMaxHeight ? "" : "overflow-x-auto"
           ]),
-          style: F(e.tableMaxHeight ? { maxHeight: e.tableMaxHeight, overflowY: "auto", overflowX: "auto" } : {})
+          style: F(
+            e.tableMaxHeight ? {
+              maxHeight: e.tableMaxHeight,
+              overflowY: "auto",
+              overflowX: "auto"
+            } : {}
+          )
         }, [
           r("div", ge, [
             r("table", ve, [
@@ -239,7 +264,11 @@ const ee = { class: "px-4 sm:px-6 lg:px-8" }, te = { class: "sm:flex sm:items-ce
                 }, [
                   (i(!0), n(p, null, D(s.columns, (o) => (i(), n("td", {
                     key: o.key,
-                    class: x(["whitespace-nowrap py-4 text-sm", o.cellClass || "", o.key === (s.columns[0] && s.columns[0].key) ? "pl-4 pr-3 font-medium text-gray-900 sm:pl-0" : "px-3 text-gray-500"])
+                    class: x([
+                      "whitespace-nowrap py-4 text-sm",
+                      o.cellClass || "",
+                      o.key === (s.columns[0] && s.columns[0].key) ? "pl-4 pr-3 font-medium text-gray-900 sm:pl-0" : "px-3 text-gray-500"
+                    ])
                   }, [
                     S(t.$slots, `cell-${o.key}`, {
                       item: l,
