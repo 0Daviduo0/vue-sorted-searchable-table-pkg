@@ -9,8 +9,8 @@ export default defineConfig({
     // Configurazione per la build in modalità libreria
     lib: {
       entry: path.resolve(__dirname, 'src/index.js'), // Punto di ingresso definito prima
-      name: 'VueDataTable', // Nome globale per UMD (se usato via <script>)
-      fileName: (format) => `vue-data-table.${format}.js`, // Nome dei file di output
+      name: 'Table', // Nome globale per UMD (se usato via <script>)
+      fileName: (format) => `vue-searchable-sortable-table.${format}.js`, // Nome dei file di output
       formats: ['es', 'umd', 'cjs'] // Formati da generare (ES Module, UMD, CommonJS)
     },
     rollupOptions: {

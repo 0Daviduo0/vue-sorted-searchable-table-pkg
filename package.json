@@ -1,14 +1,14 @@
 {
-  "name": "@daviduo/vue-serchable-sortable-table", 
+  "name": "@daviduo/vue-searchable-sortable-table", 
   "version": "0.1.0",
   "description": "Un componente tabella Vue 3 versatile e configurabile con Tailwind CSS, ricerca e ordinamento.",
   "type": "module",
-  "main": "./dist/vue-serchable-sortable-table.umd.js",
-  "module": "./dist/vue-serchable-sortable-table.es.js",
+  "main": "./dist/vue-searchable-sortable-table.umd.js",
+  "module": "./dist/vue-searchable-sortable-table.es.js",
   "exports": {
     ".": {
-      "import": "./dist/vue-serchable-sortable-table.es.js",
-      "require": "./dist/vue-serchable-sortable-table.umd.js" 
+      "import": "./dist/vue-searchable-sortable-table.es.js",
+      "require": "./dist/vue-searchable-sortable-table.umd.js" 
     }
   },
   "files": [
@@ -34,7 +34,8 @@
     "vue3",
     "component",
     "table",
-    "datatable",
+    "searchable",
+    "sortable",
     "tailwind",
     "tailwindcss",
     "search",
