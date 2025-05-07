@@ -45,10 +45,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/0Daviduo0/bottomsheet-pkg.git"
+    "url": "git+https://github.com/0Daviduo0/vue-sorted-searchable-table-pkg.git"
   },
   "bugs": {
-    "url": "https://github.com/0Daviduo0/bottomsheet-pkg/issues"
+    "url": "https://github.com/0Daviduo0/vue-sorted-searchable-table-pkg/issues"
   },
-  "homepage": "https://github.com/0Daviduo0/bottomsheet-pkg#readme"
+  "homepage": "https://github.com/0Daviduo0/vue-sorted-searchable-table-pkg#readme"
 }
