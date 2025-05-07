@@ -1,0 +1,54 @@
+{
+  "name": "@daviduo/vue-serchable-sortable-table", 
+  "version": "0.1.0",
+  "description": "Un componente tabella Vue 3 versatile e configurabile con Tailwind CSS, ricerca e ordinamento.",
+  "type": "module",
+  "main": "./dist/vue-serchable-sortable-table.umd.js",
+  "module": "./dist/vue-serchable-sortable-table.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-serchable-sortable-table.es.js",
+      "require": "./dist/vue-serchable-sortable-table.umd.js" 
+    }
+  },
+  "files": [
+    "dist" 
+  ],
+  "scripts": {
+    "dev": "vite", 
+    "build": "vite build",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0", 
+    "@heroicons/vue": "^2.0.0" 
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.0", 
+    "vite": "^5.0.0",
+    "vue": "^3.3.0" 
+    
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "component",
+    "table",
+    "datatable",
+    "tailwind",
+    "tailwindcss",
+    "search",
+    "sort",
+    "sticky-header"
+  ],
+ "author": "Davide Piroddi davide0400@gmail.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0Daviduo0/bottomsheet-pkg.git"
+  },
+  "bugs": {
+    "url": "https://github.com/0Daviduo0/bottomsheet-pkg/issues"
+  },
+  "homepage": "https://github.com/0Daviduo0/bottomsheet-pkg#readme"
+}
