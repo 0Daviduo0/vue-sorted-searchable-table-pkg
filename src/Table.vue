@@ -33,11 +33,10 @@
         :for="`table-search-input-${_uid}`"
         class="block text-sm font-medium leading-6 text-gray-900"
       >
-        {{ searchInputLabel }}
       </label>
       <div class="mt-2">
         <div
-          class="flex rounded-md bg-white shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600"
+          class="flex rounded-md bg-white shadow-sm ring-none border border-gray-300"
         >
           <div class="relative grid shrink-0 grid-cols-1">
             <select
@@ -45,7 +44,7 @@
               :id="`search-field-select-${_uid}`"
               name="search-field-select"
               aria-label="Campo di ricerca"
-              class="col-start-1 row-start-1 block w-full appearance-none rounded-l-md border-0 bg-transparent py-1.5 pl-3 pr-7 text-gray-500 focus:ring-0 sm:text-sm sm:leading-6"
+              class="col-start-1 row-start-1 block w-full rounded-l-md border-0 outline-0 bg-transparent py-1.5 pl-3 pr-7 text-gray-500 focus:ring-none focus:bg-gray-100 sm:text-sm sm:leading-6"
             >
               <option v-if="props.searchAll" value="search">
                 Cerca ovunque
@@ -58,17 +57,14 @@
                 {{ field.label }}
               </option>
             </select>
-            <ChevronDownIcon
-              class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-400"
-              aria-hidden="true"
-            />
+            
           </div>
           <input
             type="text"
             name="table-search-input"
             :id="`table-search-input-${_uid}`"
             v-model="searchQueryInput"
-            class="block min-w-0 flex-1 rounded-r-md border-0 bg-transparent py-1.5 pl-3 pr-3 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+            class="block min-w-0 flex-1 rounded-r-md border-0 bg-transparent py-1.5 pl-3 pr-3 text-gray-900 placeholder:text-gray-400 focus:ring-none sm:text-sm sm:leading-6"
             :placeholder="searchInputPlaceholder"
           />
         </div>
