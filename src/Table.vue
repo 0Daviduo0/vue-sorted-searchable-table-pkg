@@ -117,12 +117,13 @@
                     <span
                       v-if="column.sortable"
                       :class="[
-                        'ml-2 flex-none rounded',
+                        'ml-2 flex-none rounded', // Classi base per lo span dell'icona
+                        // Applica sfondi e colori del testo solo se è la colonna di ordinamento attiva
                         displaySortKey === column.key
-                          ? props.tableMaxHeight
-                            ? 'bg-gray-200 text-gray-900'
-                            : 'bg-gray-100 text-gray-900 group-hover:bg-gray-200'
-                          : 'text-gray-400 invisible group-hover:visible group-focus:visible',
+                          ? (props.tableMaxHeight
+                              ? 'bg-gray-200 text-gray-900' // Stile colonna attiva, con altezza massima tabella
+                              : 'bg-gray-100 text-gray-900 group-hover:bg-gray-200') // Stile colonna attiva, senza altezza massima
+                          : '' // Nessuna classe aggiuntiva se non è la colonna di ordinamento attiva, lo span sarà vuoto
                       ]"
                     >
                       <template v-if="displaySortKey === column.key">
@@ -132,18 +133,12 @@
                           aria-hidden="true"
                         />
                         <ChevronDownIcon
-                          v-else
-                          class="size-5"
+                          v-else class="size-5"
                           aria-hidden="true"
                         />
                       </template>
-                      <ChevronDownIcon
-                        v-else
-                        class="size-5"
-                        aria-hidden="true"
-                      />
-                    </span>
-                  </a>
+                      </span>
+                    </a>
                 </th>
                 <th
                   v-if="
