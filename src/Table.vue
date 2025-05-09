@@ -1,5 +1,5 @@
 <template>
-  <div class="px-2 sm:px-4 lg:px-6">
+  <div class="px-4 sm:px-6 lg:px-8">
     <div class="sm:flex sm:items-center">
       <div class="sm:flex-auto">
         <h1 v-if="title" class="text-base font-semibold text-gray-900">
@@ -87,7 +87,7 @@
             : {}
         "
       >
-        <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+        <div class="inline-block min-w-full p-2 align-middle sm:px-6 lg:px-8">
           <table class="min-w-full divide-y divide-gray-300">
             <thead>
               <tr>
