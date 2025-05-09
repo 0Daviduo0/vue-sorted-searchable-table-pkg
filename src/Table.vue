@@ -1,5 +1,5 @@
 <template>
-  <div class="px-4 sm:px-6 lg:px-8">
+  <div class="px-2 sm:px-4 lg:px-6">
     <div class="sm:flex sm:items-center">
       <div class="sm:flex-auto">
         <h1 v-if="title" class="text-base font-semibold text-gray-900">
@@ -34,11 +34,11 @@
         class="block text-sm font-medium leading-6 text-gray-900"
       >
       </label>
-      <div class="mt-2">
+      <div class="mt-2 bg-gray-200 rounded-full" style="padding: 2px;">
         <div
-          class="flex rounded-md bg-white shadow-sm ring-none border border-gray-300"
+          class="flex rounded-full  shadow-sm ring-none overflow-hidden "
         >
-          <div class="relative grid shrink-0 grid-cols-1">
+          <div class="relative grid shrink-0 grid-cols-1 rounded-full overflow-hidden">
             <select
               v-model="searchSelectedKey"
               :id="`search-field-select-${_uid}`"
@@ -64,7 +64,7 @@
             name="table-search-input"
             :id="`table-search-input-${_uid}`"
             v-model="searchQueryInput"
-            class="block min-w-0 flex-1 rounded-r-md border-0 bg-transparent py-1.5 pl-3 pr-3 text-gray-900 placeholder:text-gray-400 focus:ring-none sm:text-sm sm:leading-6"
+            class="block min-w-0 flex-1 rounded-r-full border-0 bg-gray-200 py-1.5 pl-3 pr-3 text-gray-900 placeholder:text-gray-400 focus:ring-none sm:text-sm sm:leading-6"
             :placeholder="searchInputPlaceholder"
           />
         </div>
